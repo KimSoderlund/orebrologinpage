@@ -17,7 +17,7 @@ loginBtn.addEventListener("click", function () {
     const welcome = document.getElementById("welcome-user");
     welcome.textContent = `Welcome, ${usernameInput}!`;
   } else {
-    alert("Invalid username or password. Please try again.");
+    alert("Fel användarnamn eller lösenord.");
   }
 });
 
@@ -46,7 +46,7 @@ createUserBtn.addEventListener("click", function () {
   const newPasswordInput = document.getElementById("new-password").value;
 
   if (newUsernameInput === "" || newPasswordInput === "") {
-    alert("Username and password cannot be empty.");
+    alert("Användarnamn och lösenord måste fyllas i.");
     return;
   }
 
@@ -55,7 +55,7 @@ createUserBtn.addEventListener("click", function () {
   const userExists = users.some((user) => user.username === newUsernameInput);
 
   if (userExists) {
-    alert("Username already exists.");
+    alert("Användarnamn inte tillgängligt.");
     return;
   }
 
