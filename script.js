@@ -21,6 +21,13 @@ loginBtn.addEventListener("click", function () {
   }
 });
 
+//logout button code
+const logoutBtn = document.getElementById("logout-btn");
+logoutBtn.addEventListener("click", function () {
+  localStorage.clear();
+  showScreen("login-screen");
+});
+
 // login page create account button code
 const registerBtn = document.getElementById("signup-btn");
 registerBtn.addEventListener("click", function () {
