@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Borås Inloggning</title>
+  </head>
+  <body>
+    <div id="login-screen" class="active">
+      <h1>logga in</h1>
+      <input type="text" id="username" placeholder="Namn" />
+      <input type="password" id="password" placeholder="lösenord" />
+      <button id="login-btn">LOGGA IN</button>
+      <button id="signup-btn">SKAPA KONTO</button>
+    </div>
+
+    <div id="welcome-screen" class="inactive">
+      <h1 id="welcome-user">VÄLKOMMEN</h1>
+      <button id="logout-btn">LOGGA UT</button>
+    </div>
+
+    <div id="create-account-screen" class="inactive">
+      <input type="text" id="new-user" placeholder="Skriv ditt namn" />
+      <input type="password" id="new-password" placeholder="Nytt Lösenord" />
+      <button id="create-user-btn">Skapa Konto</button>
+    </div>
+  </body>
+</html>
