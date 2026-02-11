@@ -25,6 +25,10 @@ loginBtn.addEventListener("click", function () {
 const logoutBtn = document.getElementById("logout-btn");
 logoutBtn.addEventListener("click", function () {
   localStorage.clear();
+  const user = document.getElementById("username");
+  const password = document.getElementById("password");
+  user.value = "";
+  password.value = "";
   showScreen("login-screen");
 });
 
