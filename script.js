@@ -1,3 +1,26 @@
+// login button code
+const loginBtn = document.getElementById("login-btn");
+
+loginBtn.addEventListener("click", function () {
+  const usernameInput = document.getElementById("username").value;
+  const passwordInput = document.getElementById("password").value;
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  const validUser = users.find(
+    (user) =>
+      user.username === usernameInput && user.password === passwordInput,
+  );
+
+  if (validUser) {
+    showScreen("welcome-screen");
+    const welcome = document.getElementById("welcome-user");
+    welcome.textContent = `Welcome, ${usernameInput}!`;
+  } else {
+    alert("Invalid username or password. Please try again.");
+  }
+});
+
 // login page create account button code
 const registerBtn = document.getElementById("signup-btn");
 registerBtn.addEventListener("click", function () {
